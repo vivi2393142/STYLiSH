@@ -1,18 +1,23 @@
-# STYLiSH 
+<!-- # STYLiSH
 <p align="left">
    An e-commerce website built with plain JavaScript.
     <br />
     <a href="https://vivi2393142.github.io/STYLiSH/"><strong>View Website »</strong></a>
     <br />
+</p> -->
+
+<p align="center">
+  <a href="https://vivi2393142.github.io/STYLiSH/">
+    <img src="./img/readme/logo-no-background.png" alt="Logo" width="200">
+  </a>
+
+  <p align="center">
+    An e-commerce website built with plain JavaScript.
+    <br />
+    <a href="https://vivi2393142.github.io/STYLiSH/"><strong>View Website »</strong></a>
+    <br />
+  </p> 
 </p>
-
-<!-- ## Demo
-
-PICA: https://pica-b4a59.web.app/
-
-![](./src/img/src/readme/overview.png) -->
-
-<!-- User: test@gmail.com Password: 123456 -->
 
 ## Technologies
 
@@ -24,7 +29,6 @@ PICA: https://pica-b4a59.web.app/
     -   TapPay
 -   Other
     -   Version Control : Git / GitHub
-
 
 ## Contact
 
