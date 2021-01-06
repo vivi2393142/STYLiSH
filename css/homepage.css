@@ -1,0 +1,207 @@
+/* ===== header_main-pic ===== */
+.homepage-main-pic {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  margin-top: 6.67rem;
+  height: 20rem;
+}
+
+.homepage-main-pic-text {
+  position: absolute;
+  left: 35%;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+  white-space: pre-line;
+  font-size: 0.9rem;
+  line-height: 2rem;
+}
+
+.homepage-main-pic-img {
+  width: auto;
+  height: 100%;
+}
+
+.homepage-main-pic-choose {
+  position: absolute;
+  align-self: flex-end;
+  padding: 0.8rem;
+  z-index: 2;
+  display: none;
+}
+
+.homepage-main-pic-choose li {
+  display: inline-block;
+  margin: 0 0.3rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 100%;
+}
+
+.homepage-main-pic-choose-inactive {
+  background-color: #fff;
+  opacity: 0.4;
+}
+
+.homepage-main-pic-choose-active {
+  background-color: #8b572a;
+  opacity: 1;
+}
+
+/* ===== header_main-pic-animation ===== */
+.marketing-pic {
+  transform: translate(100%, 0);
+  position: absolute;
+  height: 100%;
+  display: none;
+  z-index: 0;
+  min-width: 50rem;
+}
+
+.marketing-pic-now {
+  position: absolute;
+  height: 100%;
+  min-width: 50rem;
+  display: flex;
+  transform: translate(0, 0);
+}
+
+.slideAnimation {
+  position: absolute;
+  height: 100%;
+  z-index: 2;
+  min-width: 50rem;
+  animation-name: marketingImageSlides;
+  animation-duration: 10000ms;
+  display: flex;
+  transform: translate(0, 0);
+}
+
+@keyframes marketingImageSlides {
+  0% {
+    transform: translate(100%, 0);
+    opacity: 0.3;
+  }
+
+  30% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.slideOutAnimation {
+  position: absolute;
+  height: 100%;
+  z-index: 1;
+  min-width: 50rem;
+  animation-name: marketingImageSlidesOut;
+  animation-duration: 10000ms;
+  display: flex;
+}
+
+@keyframes marketingImageSlidesOut {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    /* opacity: 0; */
+    display: none;
+  }
+}
+
+/* ===== main ===== */
+.sell-items-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 2.5rem 0;
+}
+
+.sell-item {
+  margin-top: 1rem;
+  width: 48%;
+}
+
+.sell-item a {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.sell-item-pic {
+  width: 100%;
+}
+
+.sell-item-color-list {
+  display: flex;
+}
+
+.sell-item-color {
+  margin: 0.5rem 0.5rem 0.5rem 0;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.5px solid #d9d9d9;
+}
+
+.sell-item-name,
+.sell-item-price {
+  letter-spacing: 2.4px;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 600px) {
+  .homepage-main-pic {
+    height: 30rem;
+  }
+
+  .homepage-main-pic-img {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .sell-item {
+    width: 30%;
+  }
+
+  .homepage-main-pic-text {
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+  }
+
+  .homepage-main-pic-text {
+    position: absolute;
+    left: 33%;
+  }
+
+  .homepage-main-pic-choose {
+    padding: 1.5rem;
+  }
+
+  .homepage-main-pic-choose li {
+    margin: 0 0.6rem;
+  }
+
+  .homepage-main-pic-text {
+    position: absolute;
+    left: 25%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .homepage-main-pic {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 1500px) {
+  .homepage-main-pic-img {
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    top: 0;
+  }
+}

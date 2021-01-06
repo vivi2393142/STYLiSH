@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A e-commerce shopping brand, - STILiSH. We have hundreds of items for you to choose from. "
+    />
+    <!-- 寬度設定為裝置寬度 -->
+    <title>STYLiSH 產品資訊 - Vivi's Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/product.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- 共用Banner -->
+      <div class="banner">
+        <div class="version"></div>
+        <div class="banner-title">
+          <a href="./">
+            <img class="banner-logo" src="img/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <ul class="banner-nav">
+          <li
+            id="womenTab"
+            class="homepage-tabs"
+            onclick="location.href=
+          './?tag=women'"
+            style="cursor: pointer"
+          >
+            女裝
+          </li>
+          <li
+            id="menTab"
+            class="homepage-tabs"
+            onclick="location.href=
+          './?tag=men'"
+            style="cursor: pointer"
+          >
+            男裝
+          </li>
+          <li
+            id="accessoriesTab"
+            class="homepage-tabs"
+            onclick="location.href=
+          './?tag=accessories'"
+            style="cursor: pointer"
+          >
+            配件
+          </li>
+        </ul>
+
+        <div class="combine-searchbar">
+          <form id="searchbar-form" method="get" action="./">
+            <input class="searchbar-input" type="text" name="tag" />
+          </form>
+          <img class="searchbar-icon" src="img/search.png" alt="SearchIcon" />
+        </div>
+
+        <div class="combine-searchbar combine-searchbar-wider">
+          <form id="searchbar-form-wider" method="get" action="./">
+            <input
+              class="searchbar-input searchbar-input-wider"
+              type="text"
+              name="tag"
+            />
+          </form>
+          <img
+            class=".searchbar-icon searchbar-icon-wider"
+            src="img/search.png"
+            alt="SearchIcon"
+          />
+        </div>
+        <div class="cart-and-member">
+          <a class="cart" href="./cart.html">
+            <div class="banner-shopping-cart-anchor">
+              <img
+                class="banner-shopping-cart-img"
+                src="img/cart-mobile.png"
+                alt="ShoppingCart"
+              />
+              <div class="shopping-cart-number">0</div>
+            </div>
+            <div class="banner-shopping-cart-web-anchor">
+              <img
+                class="banner-shopping-cart-img-web"
+                src="img/cart.png"
+                alt="ShoppingCart"
+              />
+              <div class="shopping-cart-web-number">0</div>
+            </div>
+            <div>
+              <div class="cart-and-member-text">購物車</div>
+            </div>
+          </a>
+          <div class="member-button">
+            <img
+              class="banner-shopping-member-img"
+              src="img/member-mobile.png"
+              alt="Member"
+            />
+            <img
+              class="banner-shopping-member-img-web"
+              src="img/member.png"
+              alt="Member"
+            />
+            <div class="cart-and-member-text">會員</div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-base"></div>
+    </header>
+
+    <main>
+      <section class="wrapper product-wrapper">
+        <div class="product-main-pic">
+          <img class="product-main-pic-src" />
+        </div>
+        <div class="main-product-info">
+          <div class="product-title"></div>
+          <div class="product-main-info">
+            <div class="product-id"></div>
+            <div class="product-price"></div>
+            <div class="colors-sizes-number">
+              <div class="colors-text">顏色&nbsp&nbsp|</div>
+              <div class="colors-choices"></div>
+            </div>
+            <div class="colors-sizes-number">
+              <div class="sizes-text">尺寸&nbsp&nbsp|</div>
+              <div class="sizes-choices"></div>
+            </div>
+
+            <div class="colors-sizes-number">
+              <div class="number-text">數量&nbsp&nbsp|</div>
+              <div class="number-calculator">
+                <button class="calculator calculator-minus">-</button>
+                <div class="number-value">1</div>
+                <button class="calculator calculator-plus">+</button>
+              </div>
+            </div>
+
+            <button class="add-to-shopping-cart">加入購物車</button>
+            <div class="notice"></div>
+          </div>
+        </div>
+        <div class="product-sub-info">
+          <div class="product-sub-info-title">
+            <div>更多產品資訊</div>
+            <hr />
+          </div>
+          <div class="product-intro"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- 共用Fotter -->
+      <div class="wrapper footer-wrapper">
+        <ul class="footer-nav">
+          <li class="footer-nav-line"><a href="#">關於 Stylish</a></li>
+          <li class="footer-nav-line"><a href="#">服務條款</a></li>
+          <li class="footer-nav-line"><a href="#">隱私政策</a></li>
+          <li class="footer-nav-line"><a href="#">聯絡我們</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="contact-list">
+          <a href="#"><img src="img/line.png" alt="Line" /></a>
+          <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+        </div>
+        <div class="copyright">&copy 2018. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!----------- 共用JS ----------->
+    <script type="module" src="scripts/cartFunction.js"></script>
+    <script type="module" src="scripts/login.js"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-8JWV45F8LP"
+    ></script>
+    <script src="scripts/gtag.js"></script>
+    <!----------- 個別JS ----------->
+    <script type="module" src="scripts/product.js"></script>
+    <!----------- JS END ----------->
+  </body>
+</html>

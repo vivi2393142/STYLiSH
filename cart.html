@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A e-commerce shopping brand, - STILiSH. We have hundreds of items for you to choose from. "
+    />
+    <!-- 寬度設定為裝置寬度 -->
+    <title>STYLiSH 購物車 - Vivi's Project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cart.css" />
+  </head>
+
+  <body>
+    <header>
+      <!-- 共用Banner -->
+      <div class="banner">
+        <div class="version"></div>
+        <div class="banner-title">
+          <a href="./">
+            <img class="banner-logo" src="img/logo.png" alt="Logo" />
+          </a>
+        </div>
+        <ul class="banner-nav">
+          <li
+            id="womenTab"
+            class="homepage-tabs"
+            onclick="location.href=
+          './?tag=women'"
+            style="cursor: pointer"
+          >
+            女裝
+          </li>
+          <li
+            id="menTab"
+            class="homepage-tabs"
+            onclick="location.href=
+          './?tag=men'"
+            style="cursor: pointer"
+          >
+            男裝
+          </li>
+          <li
+            id="accessoriesTab"
+            class="homepage-tabs"
+            onclick="location.href=
+          './?tag=accessories'"
+            style="cursor: pointer"
+          >
+            配件
+          </li>
+        </ul>
+
+        <div class="combine-searchbar">
+          <form id="searchbar-form" method="get" action="./">
+            <input class="searchbar-input" type="text" name="tag" />
+          </form>
+          <img class="searchbar-icon" src="img/search.png" alt="SearchIcon" />
+        </div>
+
+        <div class="combine-searchbar combine-searchbar-wider">
+          <form id="searchbar-form-wider" method="get" action="./">
+            <input
+              class="searchbar-input searchbar-input-wider"
+              type="text"
+              name="tag"
+            />
+          </form>
+          <img
+            class=".searchbar-icon searchbar-icon-wider"
+            src="img/search.png"
+            alt="SearchIcon"
+          />
+        </div>
+        <div class="cart-and-member">
+          <a class="cart" href="./cart.html">
+            <div class="banner-shopping-cart-anchor">
+              <img
+                class="banner-shopping-cart-img"
+                src="img/cart-mobile.png"
+                alt="ShoppingCart"
+              />
+              <div class="shopping-cart-number">0</div>
+            </div>
+            <div class="banner-shopping-cart-web-anchor">
+              <img
+                class="banner-shopping-cart-img-web"
+                src="img/cart.png"
+                alt="ShoppingCart"
+              />
+              <div class="shopping-cart-web-number">0</div>
+            </div>
+            <div>
+              <div class="cart-and-member-text">購物車</div>
+            </div>
+          </a>
+          <div class="member-button">
+            <img
+              class="banner-shopping-member-img"
+              src="img/member-mobile.png"
+              alt="Member"
+            />
+            <img
+              class="banner-shopping-member-img-web"
+              src="img/member.png"
+              alt="Member"
+            />
+            <div class="cart-and-member-text">會員</div>
+          </div>
+        </div>
+      </div>
+      <div class="banner-base"></div>
+    </header>
+    <div class="loader-cover"> 
+      <div class="loader"></div>
+    </div>
+    <main>
+      <section class="cart-wrapper">
+        <div class="cart-items-table">
+          <div class="cart-items-row title-row">
+            <div class="col-info"></div>
+            <div class="col-qty">數量</div>
+            <div class="col-price">單價</div>
+            <div class="col-subtotal">小計</div>
+            <div class="col-remove"></div>
+          </div>
+          <div class="table-content">
+            <!-- 購物車商品資料 -->
+          </div>
+        </div>
+        <div class="delivery-payment">
+          <div class="delivery-payment-item">
+            配送國家
+            <select class="delivery-selection" name="delivery">
+              <option value="delivery">台灣或離島</option>
+            </select>
+          </div>
+          <div class="delivery-payment-item">
+            付款方式
+            <select class="payment-selection" name="payment">
+              <option value="credit_card">信用卡付款</option>
+            </select>
+          </div>
+        </div>
+        <div class="reminder">
+          ※ 提醒您： <br />
+          ● 請填寫正確收件人資訊，避免包裹配送不達 <br />
+          ● 請填寫正確收件人姓名 ( 與證件相符 )，避免無法領取
+        </div>
+        <div class="recipient">
+          <div class="recipient-title">收件資料</div>
+          <hr class="recipient-hr"/>
+          <div class="recipient-content">
+            <div class="recipient-content-caption">收件人姓名</div>
+            <input class="recipient-input recipient-input-name" type="text" />
+            <div class="recipient-input-note recipient-input-name-note">收件人姓名不得為空</div>
+          </div>
+          <div class="recipient-content">
+            <div class="recipient-content-caption">Email</div>
+            <input class="recipient-input recipient-input-email" type="text" />
+            <div class="recipient-input-note recipient-input-email-note">請輸入正確的Email</div>
+          </div>
+          <div class="recipient-content">
+            <div class="recipient-content-caption">手機號碼</div>
+            <input class="recipient-input recipient-input-phone" type="text" />
+            <div class="recipient-input-note recipient-input-phone-note">請輸入正確的手機號碼</div>
+          </div>
+          <div class="recipient-content">
+            <div class="recipient-content-caption">收件地址</div>
+            <input class="recipient-input recipient-input-address" type="text" />
+            <div class="recipient-input-note recipient-input-address-note">收件地址不得為空</div>
+          </div>
+          <div class="recipient-content recipient-content-time">
+            <div class="recipient-content-caption">配送時間</div>
+            <div class="recipient-content-time-content">
+              <div class="delivery-time-choose">
+                <input class="delivery-time-input"  type="radio" name="delivery-time" value="morning" />
+                <div class="delivery-time-choose-text"> 08:00 - 12:00</div>
+              </div>
+              <div class="delivery-time-choose">
+                <input class="delivery-time-input" type="radio" name="delivery-time" value="afternoon" />
+                <div class="delivery-time-choose-text">14:00 - 18:00</div>
+              </div>
+              <div class="delivery-time-choose">
+                <input class="delivery-time-input" type="radio" name="delivery-time" value="anytime" checked/>
+                <div class="delivery-time-choose-text">不指定</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="payment">
+          <div class="payment-title">付款資料
+            <div class="payment-note">請輸入正確的信用卡資訊</div>
+          </div>
+          <hr class="payment-hr"/>
+          <div class="payment-content">
+            <div class="payment-content-caption">信用卡號碼</div>
+            <div class="tpfield" id="card-number"></div>
+          </div>
+          <div class="payment-content">
+            <div class="payment-content-caption">有效期限</div>
+            <div class="tpfield" id="card-expiration-date"></div>
+          </div>
+          <div class="payment-content">
+            <div class="payment-content-caption"">安全碼</div>
+            <div class="tpfield" id="card-ccv"></div>
+          </div>
+          <hr class="payment-hr payment-hr-last">
+        </div>
+        <div class="sum">
+          <div class="sum-row">
+            <div class="sum-caption">總金額</div>
+            <div class="sum-content sum-total-value"></div>
+          </div>
+          <div class="sum-row">
+            <div class="sum-caption">運費</div>
+            <div class="sum-content sum-freight">60</div>
+          </div>
+          <hr class="sum-hr" />
+          <div class="sum-row">
+            <div class="sum-caption">應付金額</div>
+            <div class="sum-content sum-up">60</div>
+          </div>
+        </div>
+        <div class="payment-button">確認付款</div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- 共用Fotter -->
+      <div class="wrapper footer-wrapper">
+        <ul class="footer-nav">
+          <li class="footer-nav-line">
+            <a href="#">關於 Stylish</a>
+          </li>
+          <li class="footer-nav-line"><a href="#">服務條款</a></li>
+          <li class="footer-nav-line"><a href="#">隱私政策</a></li>
+          <li class="footer-nav-line"><a href="#">聯絡我們</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="contact-list">
+          <a href="#"><img src="img/line.png" alt="Line" /></a>
+          <a href="#"><img src="img/twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="img/facebook.png" alt="Facebook" /></a>
+        </div>
+        <div class="copyright">&copy 2018. All rights reserved.</div>
+      </div>
+    </footer>
+
+    <!----------- 共用JS ----------->
+    <script type="module" src="scripts/cartFunction.js"></script>
+    <script type="module" src="scripts/login.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8JWV45F8LP"></script>
+    <script src="scripts/gtag.js"></script>
+    <!----------- 個別JS ----------->
+    <script type="module" src="scripts/cart.js"></script>
+    <script src="https://js.tappaysdk.com/tpdirect/v5.4.0"></script>
+    <!----------- JS END ----------->
+  </body>
+</html>

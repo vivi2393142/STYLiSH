@@ -1,0 +1,58 @@
+/* ===== 手機 /電腦高度100%自適應 ===== */
+main {
+  height: 100%;
+  padding: 2rem 0;
+}
+
+@media (min-width: 400px) {
+  html,
+  body {
+    height: 100%;
+  }
+}
+
+/* ===== Main Layout Styles ===== */
+.thankyou-wrapper {
+  padding: 0 1rem;
+  width: 100%;
+  max-width: 1000px;
+  text-align: center;
+  align-self: center;
+}
+
+.thankyou-contents {
+  position: relative;
+}
+
+.thankyou-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.thankyou-content {
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+
+.order-number {
+  background-color: #eee;
+  padding: 0.2rem 0.7rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.link-back-button {
+  padding: 0.2rem 0.7rem 0 0.7rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  display: inline-block;
+}
+
+.link-back-button:hover {
+  color: #8b572a;
+}

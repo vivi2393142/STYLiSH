@@ -1,0 +1,414 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+* {
+  /* border: 1px solid red; */
+}
+
+select {
+  background-color: #f3f3f3;
+  border-radius: 0.3rem;
+  padding: 0.25rem 0.2rem;
+}
+
+.cart-wrapper {
+  padding: 1.5rem 1rem;
+  width: 100%;
+  max-width: 1000px;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ===== shopping items table ===== */
+.no-item-remind {
+  padding: 1.5rem 1rem;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.col-remove-src {
+  cursor: pointer;
+}
+
+.col-remove-src:hover {
+  content: url('../img/cart-remove-hover.png');
+}
+
+.cart-items-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 6.67rem;
+}
+
+.cart-items-row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.6rem 0;
+}
+
+.col-info {
+  width: 48%;
+  font-size: 0.85rem;
+  display: flex;
+}
+
+.col-info-info {
+  padding-left: 0.5rem;
+  flex-grow: 1;
+  line-height: 1.3rem;
+}
+
+.col-info-pic {
+  height: 10rem;
+}
+
+.col-remove {
+  margin-left: auto;
+  width: 48%;
+  flex-grow: 1;
+}
+
+.col-qty,
+.col-price,
+.col-subtotal {
+  width: 33%;
+  padding-top: 2rem;
+  padding-bottom: 0.3rem;
+  position: relative;
+}
+
+.col-qty::after {
+  content: '數量';
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.col-price::after {
+  content: '單價';
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.col-subtotal::after {
+  content: '小計';
+  position: absolute;
+  top: 0.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.col-qty,
+.col-price,
+.col-subtotal,
+.col-remove {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.col-qty,
+.col-price,
+.col-subtotal,
+.table-hr,
+.table-hr-null {
+  order: 2;
+}
+
+.title-row {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: none;
+  padding: 0.5rem;
+}
+
+.table-content {
+  border: 1px solid #979797;
+  padding: 0 0.5rem;
+}
+
+.content-row {
+  font-size: 0.9rem;
+}
+
+.col-remove-src {
+  width: 2.2rem;
+  margin-left: auto;
+}
+
+.table-hr {
+  width: 100%;
+  margin: 1.2rem 0 0.3rem 0;
+}
+
+.table-hr-null {
+  width: 100%;
+  margin: 1.2rem 0 0.3rem 0;
+  display: none;
+}
+
+/* ===== delivery-payment-info ===== */
+.delivery-payment {
+  background-color: #e8e8e8;
+  display: flex;
+  margin: 1.2rem 0 0.6rem 0;
+  padding: 1.1rem 1rem;
+}
+
+.delivery-payment-item {
+  width: 50%;
+  font-size: 0.9rem;
+}
+
+.delivery-selection,
+.payment-selection {
+  margin-top: 0.3rem;
+  display: block;
+}
+
+.reminder,
+.recipient,
+.payment {
+  font-size: 1rem;
+  line-height: 1.6rem;
+  padding: 0.6rem 0;
+}
+
+.recipient-title,
+.payment-title {
+  padding: 0.5rem 0;
+  font-weight: 600;
+}
+
+.recipient-content,
+.payment-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.recipient-content-caption,
+.payment-content-caption {
+  padding: 0.8rem 0 0.4rem 0;
+}
+
+.recipient-content-caption::after,
+.payment-content-caption::after {
+  content: '*';
+  color: red;
+  padding-left: 0.2rem;
+  font-size: 0.3rem;
+}
+
+.recipient-input {
+  order: 1;
+}
+
+.recipient-input-note {
+  color: red;
+  font-size: 0.9rem;
+  display: none;
+}
+
+.payment-note {
+  color: red;
+  font-size: 0.9rem;
+  font-weight: normal;
+  padding-left: 1rem;
+  display: none;
+}
+
+.recipient-input,
+.tpfield {
+  line-height: 1.5rem;
+  height: 1.4rem;
+  border: 1px solid #979797;
+  border-radius: 5px;
+  padding: 0 0.5rem;
+}
+
+.recipient-content-time-content {
+  display: flex;
+  font-size: 0.9rem;
+  flex-direction: column;
+}
+
+.delivery-time-choose {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-time-input {
+  align-items: center;
+  width: 0.8rem;
+  margin-right: 0.6rem;
+}
+
+.payment-hr-last {
+  margin: 1.5rem 0;
+}
+
+/* ===== sum-paymentButton ===== */
+.sum {
+  width: 15rem;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.sum-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  height: 2.8rem;
+}
+
+.sum-content {
+  position: relative;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.sum-content::after {
+  content: 'NT.';
+  position: absolute;
+  left: -1.8rem;
+  bottom: 0.2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.sum-hr {
+  margin: 0.5rem 0;
+}
+
+.payment-button {
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 6px;
+  padding: 0.7rem 0;
+  margin-top: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.payment-button-disabled {
+  background-color: #c7c7c7;
+  color: #fff;
+  cursor: default;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+@media (min-width: 700px) {
+  .recipient-input-note {
+    padding-left: 1rem;
+  }
+
+  .recipient-input {
+    order: 0;
+  }
+
+  .title-row {
+    display: flex;
+  }
+
+  .col-qty,
+  .col-price,
+  .col-subtotal {
+    order: 0;
+  }
+
+  .col-info {
+    width: 40%;
+  }
+
+  .col-qty,
+  .col-price,
+  .col-subtotal,
+  .col-remove {
+    width: 15%;
+  }
+
+  .col-qty,
+  .col-price,
+  .col-subtotal {
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+  }
+
+  .col-qty::after,
+  .col-price::after,
+  .col-subtotal::after {
+    content: '';
+  }
+
+  .col-remove-src {
+    margin-left: 0;
+  }
+
+  .table-hr {
+    display: none;
+  }
+
+  /* ===== delivery-payment-info ===== */
+  .recipient-content,
+  .payment-content {
+    flex-direction: row;
+    align-items: center;
+    padding: 0.5rem 0;
+  }
+
+  .recipient-content-caption,
+  .payment-content-caption {
+    padding-top: 0;
+    padding-bottom: 0;
+    width: 10rem;
+  }
+
+  .recipient-input,
+  .tpfield {
+    width: 12rem;
+    height: 1.4rem;
+    padding: 0.1rem 0.5rem;
+  }
+
+  .recipient-hr,
+  .payment-hr {
+    margin: 0.5rem 0;
+  }
+
+  .recipient-content-time-content {
+    flex-direction: row;
+  }
+
+  .delivery-time-choose {
+    width: 9rem;
+  }
+
+  .payment-button {
+    width: 15rem;
+    margin-left: auto;
+  }
+
+  .delivery-selection,
+  .payment-selection {
+    margin-left: 0.8rem;
+    display: inline;
+  }
+}
+
+@media (min-width: 1000px) {
+  .cart-items-table {
+    margin-top: 0rem;
+  }
+}

@@ -1,0 +1,279 @@
+* {
+  /* border: 1px solid red; */
+}
+
+button {
+  cursor: pointer;
+}
+
+.product-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.main-product-info,
+.product-sub-info {
+  padding: 1.2rem;
+}
+
+/* ===== 商品主資訊 ===== */
+.product-title {
+  letter-spacing: 5px;
+  font-size: 1.1rem;
+  line-height: 1.9rem;
+}
+
+.product-id {
+  color: #bababa;
+  letter-spacing: 5px;
+}
+
+.product-price {
+  margin: 1rem 0 0.5rem 0;
+  border-bottom: 1px solid #3f3a3a;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+}
+
+.colors-sizes-number {
+  display: flex;
+  align-items: center;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
+}
+
+.colors-text,
+.sizes-text,
+.number-text {
+  padding-right: 2rem;
+}
+
+.number-text {
+  display: none;
+}
+
+.colors-choices,
+.sizes-choices {
+  display: flex;
+  padding-right: 2.2rem;
+}
+
+.color-choice,
+.size-choice,
+.color-choice-chosen,
+.size-choice-chosen {
+  margin-right: 0.4rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  cursor: pointer;
+}
+
+.color-choice {
+  box-sizing: border-box;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 1px #e4e4e4;
+}
+
+/* 被選擇的顏色 */
+.color-choice-chosen {
+  box-sizing: border-box;
+  border: 4px solid #fff;
+  box-shadow: 0 0 0 1px #757575;
+}
+
+.size-choice {
+  position: relative;
+  border: none;
+  border-radius: 100%;
+  background-color: #ececec;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+/* 被選擇的尺寸 */
+.size-choice-chosen {
+  position: relative;
+  border: none;
+  border-radius: 100%;
+  background-color: #000;
+  color: #fff;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+.size-outer {
+  position: relative;
+}
+
+/* 不可選擇的尺寸 */
+.size-choice-cover {
+  position: absolute;
+  top: 0;
+  width: 2rem;
+  height: 2rem;
+  background-color: #fff;
+  opacity: 0.6;
+  cursor: default;
+}
+
+.number-calculator {
+  display: flex;
+  width: 100%;
+  border: 1px solid #979797;
+  text-align: center;
+}
+
+.number-value {
+  flex-grow: 1;
+  color: #8b572a;
+  line-height: 2.2rem;
+}
+
+.calculator {
+  width: 2rem;
+  border: none;
+  background-color: #fff;
+  font-size: 1rem;
+}
+
+.product-sub-info-title {
+  margin: 1.2rem 0;
+}
+
+.add-to-shopping-cart {
+  margin-top: 0.6rem;
+}
+
+.add-to-shopping-cart {
+  width: 100%;
+  height: 2.6rem;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 3px;
+  font-size: 1rem;
+}
+
+.notice {
+  padding: 1.5rem 0;
+}
+
+/* ===== 商品副資訊 ===== */
+.product-intro,
+.product-sub-pic {
+  margin-top: 1.5rem;
+}
+
+.product-intro {
+  font-size: 0.9rem;
+  line-height: 1.4rem;
+}
+
+.product-sub-info-title {
+  position: relative;
+  margin: 0;
+  color: #8b572a;
+}
+
+.product-sub-info-title div {
+  width: 9rem;
+  background-color: white;
+  color: #8b572a;
+}
+
+.product-sub-info-title hr {
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  width: 100%;
+}
+
+.product-main-pic {
+  margin-top: 6.67rem;
+  width: 100%;
+}
+
+.product-main-pic-src {
+  width: 100%;
+}
+
+.product-sub-pic {
+  width: 100%;
+}
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+/* > 700px 
+    1. 更改商品資訊排版
+    2. 新增內容wrapper */
+
+@media (min-width: 700px) {
+  .product-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .main-product-info {
+    margin-top: 6.67rem;
+    padding: 0;
+  }
+
+  .product-main-pic,
+  .main-product-info {
+    width: 48%;
+  }
+
+  .product-main-pic-src {
+    width: 100%;
+  }
+
+  .product-sub-info {
+    margin: 0;
+    padding: 0;
+  }
+
+  .product-wrapper {
+    padding: 2.2rem 0;
+    max-width: 1020px;
+    width: 95%;
+  }
+
+  .product-sub-info-title {
+    padding: 1.5rem 0;
+  }
+
+  .product-intro {
+    margin-top: 0;
+  }
+
+  .number-calculator {
+    max-width: 10rem;
+  }
+
+  .add-to-shopping-cart {
+    margin: 1.2rem 0;
+    max-width: 18rem;
+  }
+
+  .color-choice,
+  .size-choice,
+  .color-choice-chosen,
+  .size-choice-chosen {
+    margin-right: 0.8rem;
+  }
+
+  .number-text {
+    display: block;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product-main-pic,
+  .main-product-info {
+    margin-top: 0rem;
+  }
+}
