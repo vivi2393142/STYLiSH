@@ -15,9 +15,9 @@
     <img src="./img/readme/overview.gif" >
 </kbd>
 
-<!-- ## Core Components Structure
+## Structure
 
-![](./src/img/src/readme/componentsStructure.jpeg) -->
+![](./img/readme/structure.jpg)
 
 ## Technologies
 
@@ -29,8 +29,10 @@
 -   Libraries
     -   Facebook SDK
     -   TapPay
--   Other
-    -   Version Control : Git / GitHub
+-   Persistent Store
+    -   Web Storage
+-   Tools for Business
+    -   Google Analytics
 
 ## Website Demo
 
@@ -73,6 +75,19 @@
 
     -   Facebook SDK
 
+-   #### Responsive Web Design
+
+    <kbd>
+    <img src="./img/readme/mobileView.gif" >
+    </kbd>
+
+## Future Features
+
+-   Change default alert to custom alert
+-   Add order history functions
+-   Add like list functions
+
 ## Contact
 
+Feel free to contact me if you have any questions.<br>
 E-mail: vivi2393142@gmail.com
